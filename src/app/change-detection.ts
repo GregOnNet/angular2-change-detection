@@ -1,10 +1,6 @@
 import {Component} from 'angular2/core';
-import {Default} from './components/default/default';
-import {OnPush} from './components/on-push/on-push';
-import {CheckOnce} from './components/check-once/check-once';
-import {Detached} from './components/detached/detached';
-import {CheckAlways} from './components/check-always/check-always';
-import {NoStrategyChosen} from './components/no-strategy-chosen/no-strategy-chosen';
+import {OnPush, CheckOnce, Detached, Default,
+        CheckAlways, NoStrategyChosen} from './components/detection-strategies/demos';
 
 @Component({
   selector: 'change-detection-app',
