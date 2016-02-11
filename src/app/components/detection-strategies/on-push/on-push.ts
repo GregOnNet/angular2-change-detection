@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
-
+import {IDemo} from '../../../contracts/demo.d';
 
 @Component({
   selector: 'on-push',
@@ -7,13 +7,10 @@ import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/co
   // OnPush means that the change detector's mode will be set to CheckOnce during hydration.
   // CheckedOnce means that after calling detectChanges the mode of the change detector will become Checked.
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <h1>OnPush</h1>
-    Number of ticks: {{ numberOfTicks }}
-    <hr>
-  `
+  templateUrl: './app/components/detection-strategies/base.template.html'
 })
-export class OnPush {
+export class OnPush implements IDemo{
+  title = 'OnPush'
   numberOfTicks = 0;
 
   constructor(ref: ChangeDetectorRef) {

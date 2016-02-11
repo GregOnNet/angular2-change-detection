@@ -1,18 +1,15 @@
 import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
-
+import {IDemo} from '../../../contracts/demo.d';
 
 @Component({
   selector: 'check-once',
   // ChangeDetectionStrategy Describes within the change detector which strategy will be used the next time change detection is triggered
   // CheckedOnce means that after calling detectChanges the mode of the change detector will become Checked.
   changeDetection: ChangeDetectionStrategy.CheckOnce,
-  template: `
-    <h1>CheckOnce</h1>
-    Number of ticks: {{ numberOfTicks }}
-    <hr>
-  `
+templateUrl: './app/components/detection-strategies/base.template.html'
 })
-export class CheckOnce {
+export class CheckOnce implements IDemo {
+  title: string = ChangeDetectionStrategy[ChangeDetectionStrategy.CheckOnce];
   numberOfTicks = 0;
 
   constructor(ref: ChangeDetectorRef) {

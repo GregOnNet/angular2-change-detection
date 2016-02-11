@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
-
+import {IDemo} from '../../../contracts/demo.d';
 
 @Component({
   selector: 'default',
@@ -7,13 +7,10 @@ import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/co
   // Default means that the change detector's mode will be set to CheckAlways during hydration.
   // CheckAlways means that after calling detectChanges the mode of the change detector will remain CheckAlways.
   changeDetection: ChangeDetectionStrategy.Default,
-  template: `
-    <h1>Default</h1>
-    Number of ticks: {{ numberOfTicks }}
-    <hr>
-  `
+templateUrl: './app/components/detection-strategies/base.template.html'
 })
-export class Default {
+export class Default implements IDemo {
+  title: string = ChangeDetectionStrategy[ChangeDetectionStrategy.Default];
   numberOfTicks = 0;
 
   constructor(ref: ChangeDetectorRef) {

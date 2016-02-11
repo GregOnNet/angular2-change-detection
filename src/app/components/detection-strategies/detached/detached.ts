@@ -1,5 +1,6 @@
 import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
 import {DetachedChild} from '../detached-child/detached-child'
+import {IDemo} from '../../../contracts/demo.d';
 
 @Component({
   selector: 'detached',
@@ -7,14 +8,11 @@ import {DetachedChild} from '../detached-child/detached-child'
   // Detached means that the change detector sub tree is not a part of the main tree and should be skipped.
   // https://angular.io/docs/js/latest/api/core/ChangeDetectorRef-class.html
   changeDetection: ChangeDetectionStrategy.Detached,
-  template: `
-    <h1>Detached</h1>
-    Number of ticks: {{ numberOfTicks }}
-    <detached-child></detached-child>
-  `,
+  templateUrl: './app/components/detection-strategies/detached/detached.template.html',
   directives: [DetachedChild]
 })
-export class Detached {
+export class Detached implements IDemo {
+  title: string = ChangeDetectionStrategy[ChangeDetectionStrategy.Detached];
   numberOfTicks = 0;
 
   constructor(ref: ChangeDetectorRef) { }
