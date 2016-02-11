@@ -14,5 +14,5 @@
 - [Life-Cycle-Hooks](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
 - [Understandung Zones](http://blog.thoughtram.io/angular/2016/01/22/understanding-zones.html)
 - [Zones in Angular](http://blog.thoughtram.io/angular/2016/02/01/zones-in-angular-2.html)
-- [Advantages ov Observables](http://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html)
-- [Advantages ov Observables Part 2](http://blog.thoughtram.io/angular/2016/01/07/taking-advantage-of-observables-in-angular2-pt2.html)
+- [Advantages of Observables](http://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html)
+- [Advantages of Observables Part 2](http://blog.thoughtram.io/angular/2016/01/07/taking-advantage-of-observables-in-angular2-pt2.html)
