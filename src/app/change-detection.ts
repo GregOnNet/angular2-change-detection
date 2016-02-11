@@ -5,12 +5,14 @@ import {OnPush, CheckOnce, Detached, Default,
 @Component({
   selector: 'change-detection-app',
   template: `
-    <on-push></on-push>
-    <check-once></check-once>
-    <detached></detached>
-    <default></default>
-    <check-always></check-always>
-    <no-strategy-chosen></no-strategy-chosen>
+    <div class="ui cards">
+      <on-push></on-push>
+      <check-once></check-once>
+      <detached></detached>
+      <default></default>
+      <check-always></check-always>
+      <no-strategy-chosen></no-strategy-chosen>
+    </div>
   `,
   directives: [OnPush, CheckOnce, Detached, Default, CheckAlways, NoStrategyChosen]
 })

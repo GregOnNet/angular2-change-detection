@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>ChangeDetection</title>
@@ -9,26 +10,10 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="vendor/semantic-ui/dist/semantic.css">
 </head>
-<body>
-  <div class="ui cards">
-    <change-detection-app>Loading...</change-detection-app>
-  </div>
 
-  <h4>Sources</h4>
-  <ul>
-    <li>
-      <a href="https://angular.io/docs/ts/latest/api/core/ChangeDetectionStrategy-enum.html">ChangeDetectionStrategy</a>
-    </li>
-    <li>
-      <a href="https://angular.io/docs/js/latest/api/core/ChangeDetectorRef-class.html">ChangeDetectorRef</a>
-    </li>
-    <li>
-      <a href="https://github.com/m00s/angular2features#view-lifecycle-hydration-and-dehydration">Process (De-)Hydration</a>
-    </li>
-    <li>
-      <a href="https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html">Life-Cycle-Hooks</a>
-    </li>
-  </ul>
+<body>
+
+  <change-detection-app>Loading...</change-detection-app>
 
   <script src="vendor/systemjs/dist/system.src.js"></script>
   <script src="vendor/rxjs/bundles/Rx.js"></script>
@@ -47,4 +32,5 @@
     System.import('app.js').then(null, console.error.bind(console));
   </script>
 </body>
+
 </html>
