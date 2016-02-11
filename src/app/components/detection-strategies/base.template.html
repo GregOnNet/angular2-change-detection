@@ -1,6 +1,15 @@
-<h1>{{ title }}</h1>
-<dl>
-  <dt>Ticks</dt>
-  <dd>{{ numberOfTicks }}</dd>
-</dl>
-<hr>
+<div class="ui card">
+  <div class="content">
+    <div class="header">{{ title }}</div>
+  </div>
+  <div class="content">
+    <h4 class="ui sub header">Ticks</h4>
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <div class="summary">{{ numberOfTicks }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
