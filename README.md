@@ -8,8 +8,11 @@
 
 ## Further Reading
 
-
 - [ChangeDetectionStrategy](https://angular.io/docs/ts/latest/api/core/ChangeDetectionStrategy-enum.html)
 - [ChangeDetectorRef](https://angular.io/docs/js/latest/api/core/ChangeDetectorRef-class.html)
 - [Process (De-)Hydration](https://github.com/m00s/angular2features#view-lifecycle-hydration-and-dehydration)
 - [Life-Cycle-Hooks](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)
+- [Understandung Zones](http://blog.thoughtram.io/angular/2016/01/22/understanding-zones.html)
+- [Zones in Angular](http://blog.thoughtram.io/angular/2016/02/01/zones-in-angular-2.html)
+- [Advantages ov Observables](http://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html)
+- [Advantages ov Observables Part 2](http://blog.thoughtram.io/angular/2016/01/07/taking-advantage-of-observables-in-angular2-pt2.html)
