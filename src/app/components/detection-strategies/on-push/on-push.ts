@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
+import {Component, Input, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
 import {IDemo} from '../../../contracts/demo.d';
 
 @Component({
@@ -12,12 +12,11 @@ import {IDemo} from '../../../contracts/demo.d';
 export class OnPush implements IDemo{
   title = 'OnPush'
   numberOfTicks = 0;
+  @Input() time:Date;
 
   constructor(ref: ChangeDetectorRef) {
     setInterval(() => {
         this.numberOfTicks++;
-
-        console.log('Tick');
         // the following is required, otherwise the view will not be updated
         ref.markForCheck();
     }, 1000);

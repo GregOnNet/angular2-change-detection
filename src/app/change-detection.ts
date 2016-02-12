@@ -9,12 +9,12 @@ import {Clock} from './components/clock/clock';
     <div class="ui four column grid">
       <div class="row">
         <div class="sixteen wide column">
-          <clock></clock>
+          <clock (timeUpdated)="updateTime($event)"></clock>
         </div>
       </div>
       <div class="row">
-        <div class="column"><on-push></on-push></div>
-        <div class="column"><check-once></check-once></div>
+        <div class="column"><on-push [time]="current"></on-push></div>
+        <div class="column"><check-once [time]="current"></check-once></div>
         <div class="column"><detached></detached></div>
         <div class="column"><default></default></div>
       </div>
@@ -27,4 +27,10 @@ import {Clock} from './components/clock/clock';
   directives: [Clock, OnPush, CheckOnce, Detached,
                Default, CheckAlways, NoStrategyChosen]
 })
-export class ChangeDetectionApp { }
+export class ChangeDetectionApp {
+  current: Date;
+
+  updateTime(current: Date) {
+    this.current = current;
+  }
+}

@@ -3,4 +3,11 @@
   <p>
     {{ time | date: 'HH:mm:ss' }}
   </p>
+  <div class="ui buttons">
+    <button (click)="chooseStrategy('CheckOnce')" class="ui button">CheckOnce</button>
+    <div class="or"></div>
+    <button (click)="chooseStrategy('Detached')" class="ui button">Detach</button>
+    <div (click)="chooseStrategy('CheckOnce')" class="or"></div>
+    <button (click)="chooseStrategy('CheckAlways')" class="ui button">CheckAlways</button>
+  </div>
 </center>
