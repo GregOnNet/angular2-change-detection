@@ -4,10 +4,10 @@
     {{ time | date: 'HH:mm:ss' }}
   </p>
   <div class="ui buttons">
-    <button (click)="chooseStrategy('CheckOnce')" class="ui button">CheckOnce</button>
+    <button (click)="chooseStrategy('CheckOnce')" class="ui button"><i class="circle icon"></i> CheckOnce</button>
     <div class="or"></div>
-    <button (click)="chooseStrategy('Detached')" class="ui button">Detach</button>
+    <button (click)="chooseStrategy('Detached')" class="ui button"><i class="remove icon"></i> Detach</button>
     <div (click)="chooseStrategy('CheckOnce')" class="or"></div>
-    <button (click)="chooseStrategy('CheckAlways')" class="ui button">CheckAlways</button>
+    <button (click)="chooseStrategy('CheckAlways')" class="ui button"><i class="refresh icon"></i> CheckAlways</button>
   </div>
 </center>

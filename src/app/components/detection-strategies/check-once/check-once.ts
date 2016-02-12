@@ -18,7 +18,6 @@ export class CheckOnce implements IDemo {
     this.numberOfTicks++;
 
     setTimeout(() => {
-      console.log('detectChanges()...')
       ref.detectChanges();
 
       // Change after setting detection to checked, so this change should no

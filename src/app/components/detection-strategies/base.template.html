@@ -1,16 +1,27 @@
 <div class="ui card">
   <div class="content">
-    <div class="header">{{ title }}</div>
+    <div class="header">
+      {{ title }}
+    </div>
   </div>
   <div class="content">
     <div class="ui label">
-      <i class="clock icon"></i> {{ time | date:'HH:mm:ss'}}
+      <i class="clock icon"></i>
+      {{ time | date:'HH:mm:ss'}}
     </div>
 
     <div class="ui label">
-      <i class="icon repeat"></i> {{ numberOfTicks }}
+      <i class="icon repeat"></i>
+      {{ numberOfTicks }}
     </div>
-  <div class="content">
-
   </div>
+  <button (click)="chooseStrategy('CheckOnce')" class="mini ui attached button">
+    <i class="circle icon"></i> CheckOnce
+  </button>
+  <button (click)="chooseStrategy('Detached')" class="mini ui attached button">
+    <i class="remove icon"></i> Detach
+  </button>
+  <button (click)="chooseStrategy('CheckAlways')" class="mini attached ui button">
+    <i class="refresh icon"></i> CheckAlways
+  </button>
 </div>
