@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
+import {Component, Input, ChangeDetectionStrategy, ChangeDetectorRef} from 'angular2/core';
 import {IDemo} from '../../../contracts/demo.d';
 
 @Component({
@@ -10,18 +10,10 @@ import {IDemo} from '../../../contracts/demo.d';
 })
 export class CheckAlways implements IDemo {
   title: string = ChangeDetectionStrategy[ChangeDetectionStrategy.CheckAlways];
-  numberOfTicks = 0;
+  @Input() time:Date;
 
-  constructor(ref: ChangeDetectorRef) {
-    // After this change the detector is set to checked
-    this.numberOfTicks++;
-
-    setTimeout(() => {
-      this.numberOfTicks++;
-
-      console.log('CheckAlways: Calling detectChanges()...');
-      ref.detectChanges();
-
-    }, 6000);
+  constructor(private ref: ChangeDetectorRef) {
+    // ??? Using detectChanges throws error: Error during instantiation of CheckAlways!
+    // this.ref.detectChanges();
   }
 }
