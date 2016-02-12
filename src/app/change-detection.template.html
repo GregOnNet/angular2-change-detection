@@ -5,13 +5,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="column"><on-push [time]="current"></on-push></div>
-    <div class="column"><check-once [time]="current"></check-once></div>
-    <div class="column"><detached [time]="current"></detached></div>
-    <div class="column"><default [time]="current"></default></div>
-  </div>
-  <div class="row">
-    <div class="column"><check-always [time]="current"></check-always></div>
-    <div class="column"><no-strategy-chosen [time]="current"></no-strategy-chosen></div>
+    <div class="sixteen wide column">
+      <child-clock [time]="current"></child-clock>
+    </div>
   </div>
 </div>
