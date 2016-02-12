@@ -6,7 +6,7 @@ import {IDemo} from '../../../contracts/demo.d';
   // ChangeDetectionStrategy Describes within the change detector which strategy will be used the next time change detection is triggered
   // CheckedOnce means that after calling detectChanges the mode of the change detector will become Checked.
   changeDetection: ChangeDetectionStrategy.CheckOnce,
-templateUrl: './app/components/detection-strategies/base.template.html'
+  templateUrl: './app/components/detection-strategies/base.template.html'
 })
 export class CheckOnce implements IDemo {
   title: string = ChangeDetectionStrategy[ChangeDetectionStrategy.CheckOnce];

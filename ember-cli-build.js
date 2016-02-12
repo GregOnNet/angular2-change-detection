@@ -7,10 +7,8 @@ var mergeTrees = require('broccoli-merge-trees');
 module.exports = function(defaults) {
   var app = new Angular2App(defaults);
 
-  var myTree = new Funnel('./semantic/dist', {
-    files: [
-        'semantic.css'
-    ],
+  var myTree = new Funnel('./semantic', {
+    srcDir: 'dist',
     destDir: 'vendor/semantic-ui/dist'
   });
 
