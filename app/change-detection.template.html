@@ -1,0 +1,12 @@
+<div class="ui four column grid">
+  <div class="row">
+    <div class="sixteen wide column">
+      <clock (timeUpdated)="updateTime($event)"></clock>
+    </div>
+  </div>
+  <div class="row">
+    <div class="sixteen wide column">
+      <child-clock [time]="current"></child-clock>
+    </div>
+  </div>
+</div>
